@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#365229">
+    <meta name="description" content="FRAISER acompaña a empresas, emprendimientos, academia y universidades en propiedad intelectual, transferencia de tecnología e innovación.">
+    <link rel="icon" type="image/png" href="assets/fraiser-logo.png">
+    <title>FRAISER | From IP To Innovation</title>
+    <script>
+      (() => {
+        const root = document.documentElement;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          root.classList.add("splash-not-due");
+          return;
+        }
+
+        const key = "fraiser-splash-last-shown";
+        try {
+          const storedTime = window.localStorage.getItem(key);
+          if (storedTime === null) return;
+
+          const shownAt = Number(storedTime);
+          const now = Date.now();
+          if (!Number.isFinite(shownAt) || shownAt < 0 || shownAt > now) {
+            console.error("La fecha guardada para la bienvenida de FRAISER no es válida; se mostrará de nuevo.");
+            window.localStorage.removeItem(key);
+            return;
+          }
+
+          if (now - shownAt < 3_600_000) root.classList.add("splash-not-due");
+        } catch (error) {
+          console.error("No se pudo consultar el almacenamiento del navegador para la bienvenida de FRAISER.", error);
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <div class="splash-screen" id="splash-screen" aria-hidden="true">
+      <div class="splash-content">
+        <img src="assets/fraiser-logo.png" alt="" width="120" height="84">
+        <span class="splash-rule" aria-hidden="true"></span>
+        <p class="splash-message">Ideas que encuentran su rumbo.</p>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="utility-outer">
+        <div class="utility-bar">
+          <p>Propiedad intelectual <span aria-hidden="true">·</span> transferencia <span aria-hidden="true">·</span> innovación</p>
+          <nav class="social-links social-links--top" aria-label="Redes sociales">
+            <a href="https://www.facebook.com/FraiserIP/" target="_blank" rel="noopener noreferrer" aria-label="FRAISER en Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.7V10H6.7v3h2.9v8h3.9Z"></path></svg>
+              <span>Facebook</span>
+            </a>
+            <a href="https://www.linkedin.com/in/phd-ileana-serrano-fraire-40357044/" target="_blank" rel="noopener noreferrer" aria-label="FRAISER en LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.6 3.5a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2ZM3 9h3.2v12H3zm5.4 0h3v1.6h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.2 2.3 4.2 5.2V21h-3.2v-6.4c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H8.4z"></path></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/fraiserip/" target="_blank" rel="noopener noreferrer" aria-label="FRAISER en Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="social-icon-dot" cx="17.5" cy="6.8" r="1"></circle></svg>
+              <span>Instagram</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="navigation-wrap">
+        <a class="brand" href="#inicio" aria-label="FRAISER, inicio">
+          <img src="assets/fraiser-logo.png" alt="FRAISER — From IP To Innovation" width="120" height="84">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="menu-toggle-label">Menú</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path class="menu-line menu-line--top" d="M4 6h16"></path>
+            <path class="menu-line menu-line--middle" d="M4 12h16"></path>
+            <path class="menu-line menu-line--bottom" d="M4 18h16"></path>
+          </svg>
+        </button>
+
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Navegación principal">
+          <a href="#nosotros">Nosotros</a>
+          <a href="#servicios">Servicios</a>
+          <a href="https://www.wipo.int/es/web/copyright/">Blog</a>
+          <a href="#contacto">Contacto</a>
+          <a class="header-contact" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+          <button class="search-toggle" type="button" aria-expanded="false" aria-controls="site-search" aria-label="Abrir búsqueda">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+          </button>
+        </nav>
+      </div>
+
+      <form class="search-panel" id="site-search" action="https://www.fraiserfromiptoinnovation.com/" method="get" role="search" aria-describedby="search-hint" hidden>
+        <label for="search-input">Buscar en FRAISER</label>
+        <div class="search-field">
+          <input id="search-input" name="s" type="search" placeholder="Escribe un tema o una palabra clave" autocomplete="off">
+          <button type="submit">Buscar</button>
+        </div>
+        <p class="search-hint" id="search-hint">Los resultados se consultan en el sitio oficial de FRAISER.</p>
+      </form>
+    </header>
+
+    <main id="contenido">
+      <section class="atlas-hero" id="inicio" aria-labelledby="hero-title" data-searchable data-title="Inicio" data-category="FRAISER" data-summary="Conoce cómo FRAISER acompaña proyectos de innovación y protección de activos intangibles." data-keywords="propiedad intelectual transferencia de tecnologia emprendimientos empresas academia universidades">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1 id="hero-title">Cada innovación necesita una ruta<span class="title-mark">.</span></h1>
+            <p class="hero-intro">Acompañamos a emprendedores, empresas, academia y universidades en la protección y el desarrollo de sus proyectos de innovación.</p>
+            <div class="hero-actions">
+              <a class="button button--lime" href="https://wa.me/523312221755?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20FRAISER" target="_blank" rel="noopener noreferrer">
+                Hablemos por WhatsApp
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+              </a>
+              <a class="text-link text-link--light" href="#servicios">Explorar servicios</a>
+            </div>
+            <p class="hero-origin">Desde 2022 <span aria-hidden="true">/</span> Zapopan, Jalisco</p>
+          </div>
+
+          <figure class="field-plate">
+            <div class="plate-image-wrap">
+              <img src="assets/photography/laboratory-glassware.jpg" alt="Recipientes de vidrio y una pipeta sobre una mesa de laboratorio." width="1500" height="1000" fetchpriority="high">
+              <span class="plate-coordinate">IDEA → INNOVACIÓN</span>
+              <div class="route-annotation" aria-label="Tres etapas de un proyecto: conocimiento, protección y transferencia">
+                <span>Conocimiento</span>
+                <span class="route-line" aria-hidden="true"></span>
+                <span>Protección</span>
+                <span class="route-line" aria-hidden="true"></span>
+                <span>Transferencia</span>
+              </div>
+            </div>
+            <figcaption>El trabajo científico abre preguntas y posibilidades.</figcaption>
+          </figure>
+        </div>
+        <a class="hero-scroll" href="#nosotros">
+          <span>Conoce FRAISER</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"></path></svg>
+        </a>
+      </section>
+
+      <section class="about-section section-shell" id="nosotros" aria-labelledby="about-title" data-searchable data-title="Nosotros" data-category="FRAISER" data-summary="Conoce el trabajo de FRAISER en propiedad intelectual, transferencia de tecnología y gestión de innovación." data-keywords="firma quienes somos acerca de nosotros">
+        <div class="about-grid">
+          <h2 id="about-title">Del conocimiento al siguiente paso.</h2>
+          <div class="about-copy">
+            <p>FRAISER es una firma especializada en propiedad intelectual, transferencia de tecnología y gestión de innovación. Desde 2022 acompaña a personas y organizaciones en el desarrollo de proyectos y en la gestión y protección de sus activos intangibles.</p>
+            <p>Su apoyo puede incluir identificar activos que conviene proteger, organizar proyectos de investigación e innovación, revisar aspectos regulatorios y explorar acuerdos para compartir tecnología. También trabaja inteligencia competitiva y capacitación.</p>
+            <a class="text-link" href="#contacto">Conversemos sobre tu proyecto <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="audience-band" aria-label="Públicos a quienes acompaña FRAISER">
+          <span>Emprendimientos</span>
+          <span>Empresas</span>
+          <span>Academia</span>
+          <span>Universidades</span>
+        </div>
+      </section>
+
+      <section class="services-section" id="servicios" aria-labelledby="services-title" data-searchable data-title="Servicios" data-category="Sección" data-summary="Explora las seis áreas de trabajo de FRAISER y abre cada una para consultar sus temas." data-keywords="servicios áreas de trabajo asesoría">
+        <div class="section-shell">
+          <div class="section-heading">
+            <h2 id="services-title">Cómo puede ayudarte FRAISER</h2>
+            <p>Elige la pregunta que más se acerca a tu proyecto. Abre cada área para conocer el tipo de apoyo que ofrece FRAISER; el alcance se define según el caso.</p>
+          </div>
+
+          <nav class="service-guide" aria-label="Encuentra un área según tu necesidad">
+            <a href="#propiedad-intelectual">
+              <span>¿Cómo proteger una creación, una marca o una invención?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </a>
+            <a href="#transferencia">
+              <span>¿Cómo compartir, licenciar o comercializar tecnología?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </a>
+            <a href="#gestion-innovacion">
+              <span>¿Cómo estructurar un proyecto de investigación o innovación?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </a>
+            <a href="#asuntos-regulatorios">
+              <span>¿Qué permisos o requisitos pueden aplicar a un producto?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </a>
+            <a href="#inteligencia-competitiva">
+              <span>¿Qué tendencias tecnológicas o señales de mercado observar?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </a>
+            <a href="#capacitacion">
+              <span>¿Qué necesita aprender el equipo sobre innovación?</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </a>
+          </nav>
+
+          <div class="service-index" id="service-index">
+            <details class="service-entry" id="propiedad-intelectual" data-searchable data-title="Propiedad intelectual" data-category="Servicio" data-summary="Identificar qué proteger: marcas, invenciones, obras y diseños." data-keywords="innovacion marcas patentes modelos utilidad diseños industriales circuitos integrados derechos autor software bases datos reservas isbn issn variedades vegetales secretos industriales fto libertad operacion busqueda estado tecnica">
+              <summary>
+                <span class="entry-code">PI</span>
+                <span class="entry-main"><span class="entry-title">Propiedad intelectual</span><span class="entry-summary">Identifica qué proteger: marcas, invenciones, obras y diseños.</span></span>
+                <span class="entry-control" aria-hidden="true"></span>
+              </summary>
+              <div class="entry-detail">
+                <p>Si necesitas proteger una marca, invención, diseño, obra o software, FRAISER ofrece asesoría para identificar el activo y revisar opciones de registro y gestión en México y el extranjero.</p>
+                <p>La información institucional presenta la propiedad intelectual como un conjunto de derechos territoriales, exclusivos y temporales. Su alcance comprende creaciones artísticas y literarias, signos que distinguen productos y servicios e invenciones con utilidad comercial. La estrategia considera el tipo de activo, el presupuesto y los territorios de interés.</p>
+                <p>La búsqueda del estado de la técnica reúne información que se hizo pública antes de presentar una solicitud o prioridad, en México o en otros países. Este análisis ayuda a orientar la factibilidad, la redacción de la solicitud y la estrategia de protección.</p>
+                <ul>
+                  <li>Marcas, imagen y avisos comerciales; patentes, modelos de utilidad, diseños industriales y esquemas de trazado de circuitos integrados.</li>
+                  <li>Indicaciones geográficas, denominaciones de origen, obras literarias y artísticas, software, aplicaciones móviles y bases de datos; reservas de derechos de uso exclusivo, ISBN e ISSN.</li>
+                  <li>Registro de variedades vegetales y protección documental y física de secretos industriales.</li>
+                  <li>Búsquedas del estado de la técnica, análisis de patentabilidad y libertad de operación (FTO) para orientar la estrategia y prevenir posibles infracciones.</li>
+                  <li>Análisis previo de novedad global, actividad inventiva y aplicación industrial; para modelos de utilidad, de novedad y aplicación industrial; y para diseños, de novedad, creación independiente y grado significativo.</li>
+                  <li>Auditorías y opiniones técnicas sobre patentes, modelos de utilidad y diseños para investigación y desarrollo o litigios, además de controversias por infracciones, apropiación de activos y competencia desleal.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="service-entry" id="transferencia" data-searchable data-title="Transferencia de tecnología y contratos" data-category="Servicio" data-summary="Explorar opciones para licenciar, compartir o comercializar tecnología." data-keywords="licenciamiento licencias contratos confidencialidad material biologico investigacion abierta modelos negocio comercializacion valoracion trl tecnologia">
+              <summary>
+                <span class="entry-code">TT</span>
+                <span class="entry-main"><span class="entry-title">Transferencia de tecnología y contratos</span><span class="entry-summary">Explora opciones para licenciar, compartir o comercializar tecnología.</span></span>
+                <span class="entry-control" aria-hidden="true"></span>
+              </summary>
+              <div class="entry-detail">
+                <p>Si tu equipo busca compartir una tecnología, licenciarla o acercarla a otros usuarios, FRAISER aborda las opciones de transferencia, los acuerdos y la negociación para su uso o explotación comercial.</p>
+                <p>La información institucional describe la transferencia como el paso formal de conocimiento y de derechos de uso o explotación hacia una persona u organización distinta al equipo que desarrolló la tecnología.</p>
+                <ul>
+                  <li>Comercialización nacional e internacional, e importación y exportación de activos intangibles.</li>
+                  <li>Fichas tecnológicas, valoración y dictámenes valuatorios, y análisis de madurez con niveles TRL.</li>
+                  <li>Prospección de usuarios, debida diligencia (due diligence), modelos de negocio, incubación y aceleración.</li>
+                  <li>Contratos de confidencialidad, entrega de material biológico, servicios, investigación, innovación abierta y licenciamiento.</li>
+                  <li>Negociación, condiciones mutuamente acordadas, creación de start-ups, alianzas, coinversiones y vinculación con inversionistas ángel.</li>
+                </ul>
+                <p>La página de servicios menciona definiciones de transferencia atribuidas a OMPI, AUTM y Conahcyt, además de evidencias para el SNII como planes de negocio, contratos, derechos registrados y cartas de usuarios que acrediten beneficios económicos, mejora de productividad o beneficios sociales.</p>
+              </div>
+            </details>
+
+            <details class="service-entry" id="gestion-innovacion" data-searchable data-title="Gestión de innovación" data-category="Servicio" data-summary="Estructurar proyectos de investigación e innovación y gestionar fondos." data-keywords="innovacion investigacion basica aplicada tecnologia reniecyt coecytjal fondos proyectos factibilidad biotecnologia farmaceutica electronica mecanica dispositivos medicos">
+              <summary>
+                <span class="entry-code">GI</span>
+                <span class="entry-main"><span class="entry-title">Gestión de innovación</span><span class="entry-summary">Estructura proyectos de investigación e innovación y gestiona fondos.</span></span>
+                <span class="entry-control" aria-hidden="true"></span>
+              </summary>
+              <div class="entry-detail">
+                <p>Si necesitas dar estructura a un proyecto de investigación básica o aplicada o de innovación tecnológica, FRAISER describe apoyo en coordinación, acreditaciones y gestión de fondos. Su información menciona áreas como biotecnología, farmacéutica, electrónica, mecánica y dispositivos médicos.</p>
+                <ul>
+                  <li>Coordinación de proyectos; acreditación jurídica ante instancias como RENIECYT y Coecytjal, y gestión de fondos públicos y privados, nacionales y extranjeros.</li>
+                  <li>Asesoría técnica y legal para elaborar acuerdos de Consentimiento Fundamentado Previo (PIC) y de Condiciones Mutuamente Acordadas para la Participación Justa y Equitativa de Beneficios (ABS) derivados del uso de recursos fitogenéticos, en el marco del Protocolo de Nagoya. La descripción de FRAISER delimita este acompañamiento a proyectos de biotecnología, farmacéutica, cosmética y alimentos.</li>
+                  <li>Políticas de innovación, propiedad intelectual y sostenibilidad para empresas, educación e investigación.</li>
+                  <li>Análisis y propuestas de modificación normativa en innovación en ciencias de la vida.</li>
+                </ul>
+                <p>La información institucional distingue la investigación básica, enfocada en generar conocimiento sobre fenómenos, de la investigación aplicada, que explora usos o métodos para objetivos definidos.</p>
+              </div>
+            </details>
+
+            <details class="service-entry" id="asuntos-regulatorios" data-searchable data-title="Asuntos regulatorios" data-category="Servicio" data-summary="Revisar permisos y requisitos sanitarios para productos regulados." data-keywords="innovacion regulacion sanitaria permisos colecta recursos geneticos conocimientos tradicionales semarnat consentimiento fundamentado previo condiciones mutuamente acordadas pic nagoya abs">
+              <summary>
+                <span class="entry-code">AR</span>
+                <span class="entry-main"><span class="entry-title">Asuntos regulatorios</span><span class="entry-summary">Revisa permisos y requisitos sanitarios para productos regulados.</span></span>
+                <span class="entry-control" aria-hidden="true"></span>
+              </summary>
+              <div class="entry-detail">
+                <p>Si tu producto o proyecto está sujeto a requisitos sanitarios o involucra recursos genéticos, FRAISER describe apoyo en registros, permisos y gestiones ante SEMARNAT. El alcance y los requisitos dependen del producto, la actividad y la normativa aplicable.</p>
+                <ul>
+                  <li>Registros sanitarios y permisos relacionados con productos y actividades reguladas.</li>
+                  <li>Gestión ante SEMARNAT para el acceso a recursos genéticos y conocimientos tradicionales, incluida la participación justa y equitativa de beneficios con comunidades proveedoras.</li>
+                  <li>Permisos de colecta de recursos naturales ante SEMARNAT.</li>
+                </ul>
+                <p>El sitio delimita los servicios de acceso y participación en beneficios a proyectos de biotecnología, farmacéutica, cosmética y alimentos. El alcance y los requisitos dependen del producto, la actividad y el marco normativo aplicable.</p>
+              </div>
+            </details>
+
+            <details class="service-entry" id="inteligencia-competitiva" data-searchable data-title="Inteligencia competitiva" data-category="Servicio" data-summary="Conocer tendencias, tecnologías y mercados para decidir." data-keywords="innovacion monitoreo vigilancia competencia sector mercado patentes tendencias">
+              <summary>
+                <span class="entry-code">IC</span>
+                <span class="entry-main"><span class="entry-title">Inteligencia competitiva</span><span class="entry-summary">Conoce tendencias, tecnologías y mercados para decidir.</span></span>
+                <span class="entry-control" aria-hidden="true"></span>
+              </summary>
+              <div class="entry-detail">
+                <p>Si necesitas entender qué ocurre en tu sector antes de decidir, FRAISER reúne y analiza información del entorno, tecnologías y mercados para reconocer señales y valorar oportunidades.</p>
+                <ul>
+                  <li>Monitoreo, vigilancia y estudios de tendencias tecnológicas.</li>
+                  <li>Estudios de mercado con fuentes primarias y secundarias.</li>
+                </ul>
+              </div>
+            </details>
+
+            <details class="service-entry" id="capacitacion" data-searchable data-title="Capacitación" data-category="Servicio" data-summary="Capacitar equipos en propiedad intelectual e innovación." data-keywords="cursos formacion aprendizaje talleres online presencial">
+              <summary>
+                <span class="entry-code">CAP</span>
+                <span class="entry-main"><span class="entry-title">Capacitación</span><span class="entry-summary">Capacita a tu equipo en propiedad intelectual e innovación.</span></span>
+                <span class="entry-control" aria-hidden="true"></span>
+              </summary>
+              <div class="entry-detail">
+                <p>Si tu equipo necesita fortalecer conocimientos para tomar decisiones sobre innovación y activos intangibles, FRAISER ofrece cursos personalizados, en línea o presenciales, sobre:</p>
+                <ul>
+                  <li>Propiedad intelectual.</li>
+                  <li>Búsqueda de patentes y monitoreo tecnológico para investigación y desarrollo.</li>
+                  <li>Transferencia de tecnología.</li>
+                  <li>Conformación de proyectos de innovación y análisis de factibilidad técnica, económica y de mercado.</li>
+                  <li>Regulación sanitaria para la industria farmacéutica y dispositivos médicos.</li>
+                </ul>
+              </div>
+            </details>
+          </div>
+
+          <p class="services-endnote">¿Tu proyecto combina varias de estas áreas? <a href="#contacto">Cuéntanos qué estás desarrollando.</a></p>
+        </div>
+      </section>
+
+      <section class="visual-notes section-shell" aria-labelledby="visual-notes-title">
+        <div class="visual-notes-heading">
+          <h2 id="visual-notes-title">Investigación que encuentra nuevas conexiones.</h2>
+          <p>Los proyectos combinan disciplinas, recursos y decisiones; la protección intelectual y la transferencia ayudan a organizar el camino.</p>
+        </div>
+        <div class="visual-note-grid">
+          <figure class="visual-note visual-note--research">
+            <img src="assets/photography/laboratory-researcher.jpg" alt="Investigadora observa una muestra a través de un microscopio dentro de un laboratorio." width="1400" height="2100" loading="lazy">
+            <figcaption>Investigación y ciencias de la vida</figcaption>
+          </figure>
+          <figure class="visual-note visual-note--prototype">
+            <img src="assets/photography/electronics-prototype.jpg" alt="Técnico trabaja sobre los componentes de una placa electrónica durante el desarrollo de tecnología." width="1400" height="934" loading="lazy">
+            <figcaption>Prototipos y tecnología aplicada</figcaption>
+          </figure>
+        </div>
+        <figure class="visual-note visual-note--route">
+          <picture>
+            <source media="(max-width: 760px)" srcset="assets/illustrations/innovation-route-mobile.svg" width="380" height="700">
+            <img src="assets/illustrations/innovation-route.svg" alt="Recorrido ilustrado en cuatro etapas: identificar un activo, definir su protección, analizar su madurez tecnológica y preparar acuerdos de transferencia." width="1080" height="420" loading="lazy">
+          </picture>
+          <figcaption>Una ruta posible: identificar, proteger, evaluar y transferir.</figcaption>
+        </figure>
+      </section>
+
+      <section class="references-section section-shell" id="referencias" aria-labelledby="references-title" data-searchable data-title="Referencias institucionales" data-category="FRAISER" data-summary="Organizaciones mencionadas en la sección de clientes del sitio oficial de FRAISER." data-keywords="udg universidad guadalajara exinsa uaslp san luis potosi pappiem padron asesores directorio talento jalisco">
+        <div class="references-heading">
+          <h2 id="references-title">Referencias institucionales</h2>
+          <p>En la sección de clientes de FRAISER aparecen la Universidad de Guadalajara, Exinsa y la Universidad Autónoma de San Luis Potosí.</p>
+        </div>
+        <div class="reference-register" aria-label="Logotipos institucionales">
+          <img src="assets/partners/UDG.png" alt="Universidad de Guadalajara" width="520" height="233" loading="lazy">
+          <img src="assets/partners/Exinsa.png" alt="Exinsa" width="520" height="233" loading="lazy">
+          <img src="assets/partners/UASLP.png" alt="Universidad Autónoma de San Luis Potosí" width="520" height="233" loading="lazy">
+        </div>
+        <p class="reference-note">El sitio también menciona el Padrón de Asesores PAPPIEM 2024 y el Directorio de Talento de Jalisco.</p>
+      </section>
+
+      <section class="featured-reading-section" id="lectura-destacada" aria-labelledby="reading-title">
+        <div class="section-shell">
+          <header class="reading-heading">
+            <h2 id="reading-title">Una lectura destacada</h2>
+            <p>¿Qué cambia cuando una innovación parte de la biodiversidad y de conocimientos tradicionales? El artículo de FRAISER conecta esa pregunta con el Protocolo de Nagoya, la participación de las comunidades y la propiedad intelectual.</p>
+          </header>
+          <div class="reading-grid">
+            <figure class="editorial-plate">
+              <img src="assets/photography/nagoya-editorial.png" alt="Paisaje de humedal con agua turquesa y vegetación, imagen vinculada al tema de biodiversidad" width="1280" height="845" loading="lazy">
+              <figcaption>Imagen: CONABIO (2020), según el crédito del artículo original.</figcaption>
+            </figure>
+            <article class="article-entry" id="nagoya-articulo">
+              <p class="article-date">Artículo original · 28 de mayo de 2024</p>
+              <h3 id="nagoya-title">El Protocolo de Nagoya y la responsabilidad social en innovación en ciencias de la vida</h3>
+              <p>El artículo explora cómo el acceso a los recursos genéticos y los conocimientos tradicionales se relaciona con la innovación en ciencias de la vida, y por qué la participación justa y equitativa de las comunidades proveedoras forma parte de esa conversación.</p>
+              <a class="article-source-link" href="https://www.fraiserfromiptoinnovation.com/index.php/2024/05/28/el-protocolo-de-nagoya-y-la-responsabilidad-social-en-innovacion-en-ciencias-de-la-vida/" target="_blank" rel="noopener noreferrer">Leer el artículo original en FRAISER <span aria-hidden="true">↗</span></a>
+              <details class="article-expand">
+                <summary>Leer la síntesis completa del artículo</summary>
+                <div>
+                  <h4>El Protocolo de Nagoya y el acceso a recursos genéticos</h4>
+                  <p>El texto presenta el Protocolo de Nagoya —complementario al Convenio sobre la Diversidad Biológica— como un marco internacional sobre el acceso a recursos genéticos y la participación justa y equitativa en los beneficios derivados de su utilización. La publicación señala que México lo ratificó en 2014 y explica que su alcance también comprende conocimientos tradicionales asociados a esos recursos.</p>
+                  <p>El artículo describe a las comunidades locales e indígenas como custodias de la biodiversidad y plantea que los esquemas de participación pueden incluir beneficios monetarios y no monetarios, así como enfoques de gobernanza y justicia social.</p>
+                  <h4>México, biodiversidad e innovación</h4>
+                  <p>La publicación presenta a México como un país megadiverso y proveedor de recursos que se utilizan en investigación y desarrollo tecnológico, particularmente en biotecnología y otras áreas de ciencias de la vida. Se refiere a recursos de origen vegetal, animal y microbiano y a su uso en productos y procesos para las industrias biotecnológica, farmacéutica, cosmética y alimentaria.</p>
+                  <p>En el contexto de la Cuarta Revolución Industrial, el artículo destaca la convergencia entre el ámbito digital y el biológico: genómica, biología sintética, bioinformática, inteligencia artificial aplicada a las biociencias, tecnologías digitales para datos genéticos y genómicos, impresión molecular en 3D y bionanotecnología.</p>
+                  <h4>Acuerdos, consentimiento y beneficios compartidos</h4>
+                  <p>Según la publicación, los usuarios de los recursos genéticos y conocimientos tradicionales —como empresas, universidades y centros de investigación— y las comunidades proveedoras formalizan acuerdos sobre el acceso y la distribución de beneficios. El artículo identifica dos instrumentos: el Consentimiento Fundamentado Previo (PIC) y las Condiciones Mutuamente Acordadas (MAT).</p>
+                  <p>El texto explica que estos acuerdos establecen las formas de participación en beneficios monetarios y no monetarios y pueden abordar implicaciones de propiedad intelectual y transferencia de tecnología. También describe su inscripción ante el punto focal nacional en SEMARNAT y la emisión posterior de un Certificado de Cumplimiento Internacionalmente Reconocido (IRCC); el artículo atribuye reconocimiento internacional a ese certificado.</p>
+                  <h4>Responsabilidad y prevención de la biopiratería</h4>
+                  <p>La publicación vincula la falta de formalización con la biopiratería. También refiere posibles sanciones económicas en Europa y la India y posibles efectos en la concesión de derechos de propiedad intelectual cuando no se cuenta con el IRCC. Son afirmaciones del artículo de 2024: no confirman por sí mismas los requisitos, procedimientos o consecuencias legales vigentes en México ni en otras jurisdicciones.</p>
+                  <h4>Dos conceptos mencionados en el artículo</h4>
+                  <dl class="article-glossary">
+                    <div>
+                      <dt>Recurso genético</dt>
+                      <dd>Material genético de origen vegetal, animal, microbiano o de otro tipo que contiene unidades funcionales de la herencia y tiene valor real o potencial. El artículo atribuye esta definición a la LGEEPA (2018).</dd>
+                    </div>
+                    <div>
+                      <dt>Biopiratería</dt>
+                      <dd>Apropiación no autorizada de conocimientos y materiales de la medicina tradicional, según la definición de la OMS (2002) citada en el artículo.</dd>
+                    </div>
+                  </dl>
+                </div>
+              </details>
+              <p class="article-note">Síntesis del artículo publicado el 28 de mayo de 2024. Conserva lo expuesto por esa publicación, pero no verifica la vigencia de las normas o procedimientos ni constituye asesoría jurídica. Confirma los requisitos aplicables antes de tomar decisiones.</p>
+              <p class="article-invitation">FRAISER invita a conversar sobre esquemas de participación justa y equitativa en proyectos de investigación e innovación en ciencias de la vida con propiedad intelectual asociada.</p>
+              <a class="text-link text-link--light" href="#contacto">Conversemos sobre tu proyecto <span aria-hidden="true">↗</span></a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contacto" aria-labelledby="contact-title" data-searchable data-title="Contacto" data-category="Contacto" data-summary="Escribe a FRAISER por WhatsApp o correo, llama o consulta su dirección en Zapopan." data-keywords="telefono telefonos correo email mail whatsapp direccion ubicación zapopan jalisco mensaje contacto">
+        <div class="section-shell contact-grid">
+          <div class="contact-copy">
+            <h2 id="contact-title">Hablemos de lo que estás creando.</h2>
+            <p>Cuéntanos qué estás desarrollando, en qué etapa está y qué te gustaría resolver. Con esa información será más fácil ubicar el área de trabajo relacionada con tu necesidad. Puedes escribirnos por WhatsApp o correo, o preparar un mensaje desde el formulario.</p>
+            <a class="button button--lime" href="https://wa.me/523312221755?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20FRAISER" target="_blank" rel="noopener noreferrer">
+              Contactar por WhatsApp
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"></path></svg>
+            </a>
+            <dl class="contact-details">
+              <div><dt>Teléfono</dt><dd><a href="tel:+523312221755">+52 (33) 1222 1755</a></dd></div>
+              <div><dt>Correo</dt><dd><a href="mailto:fraiserinnovation@gmail.com">fraiserinnovation@gmail.com</a></dd></div>
+              <div>
+                <dt>Dirección</dt>
+                <dd>Calle Jacarandas 1464, Col. Paraísos del Colli, Zapopan, Jalisco, México, C.P. 45069.</dd>
+                <dd><a class="map-link" href="https://maps.google.com/?q=Calle+Jacarandas+1464+Para%C3%ADsos+del+Colli+Zapopan+Jalisco+45069" target="_blank" rel="noopener noreferrer">Ver ubicación <span aria-hidden="true">↗</span></a></dd>
+              </div>
+            </dl>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <p class="form-heading">Déjanos un mensaje</p>
+            <label for="name">Nombre</label>
+            <input id="name" name="name" autocomplete="name" required>
+            <label for="email">Correo</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button class="button button--cyan" type="submit">Preparar mensaje <span aria-hidden="true">↗</span></button>
+            <p class="form-note">Este formulario prepara un correo en tu aplicación; no envía datos desde esta página.</p>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <a class="brand brand--footer" href="#inicio" aria-label="FRAISER, volver al inicio">
+          <img src="assets/fraiser-logo.png" alt="FRAISER — From IP To Innovation" width="120" height="84">
+        </a>
+        <p class="footer-summary">Propiedad intelectual · Innovación</p>
+        <nav class="footer-navigation" aria-label="Enlaces del sitio">
+          <a href="#nosotros">Nosotros</a>
+          <a href="#servicios">Servicios</a>
+          <a href="https://www.wipo.int/es/web/copyright/">Blog</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <nav class="social-links social-links--footer" aria-label="Redes sociales">
+          <a href="https://www.facebook.com/FraiserIP/" target="_blank" rel="noopener noreferrer" aria-label="FRAISER en Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.6-1.6h1.7V3.8c-.3 0-1.4-.1-2.7-.1-2.7 0-4.5 1.6-4.5 4.7V10H6.7v3h2.9v8h3.9Z"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/phd-ileana-serrano-fraire-40357044/" target="_blank" rel="noopener noreferrer" aria-label="FRAISER en LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.6 3.5a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2ZM3 9h3.2v12H3zm5.4 0h3v1.6h.1c.4-.8 1.5-2 3.4-2 3.6 0 4.2 2.3 4.2 5.2V21h-3.2v-6.4c0-1.5 0-3.4-2.1-3.4s-2.4 1.6-2.4 3.3V21H8.4z"></path></svg>
+          </a>
+          <a href="https://www.instagram.com/fraiserip/" target="_blank" rel="noopener noreferrer" aria-label="FRAISER en Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="social-icon-dot" cx="17.5" cy="6.8" r="1"></circle></svg>
+          </a>
+        </nav>
+        <nav class="footer-legal" aria-label="Avisos legales">
+          <button type="button" data-open-legal="privacy-policy">Aviso de privacidad</button>
+          <button type="button" data-open-legal="cookie-policy">Política de cookies</button>
+        </nav>
+        <p class="footer-copyright">© <span id="current-year">2026</span> FRAISER. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <aside class="whatsapp-widget" aria-label="Contacto por WhatsApp">
+      <div class="whatsapp-prompt" id="whatsapp-prompt" role="status" aria-live="polite" aria-atomic="true" hidden>
+        <button class="whatsapp-prompt__close" type="button" aria-label="Cerrar invitación de WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+        </button>
+        <p class="whatsapp-prompt__message">¿Tienes dudas sobre tu proyecto? Escríbenos por WhatsApp; el equipo FRAISER podrá orientarte.</p>
+        <a class="whatsapp-prompt__link" href="https://wa.me/523312221755?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20FRAISER" target="_blank" rel="noopener noreferrer">Contactar al equipo <span aria-hidden="true">↗</span></a>
+      </div>
+      <a class="whatsapp-float" href="https://wa.me/523312221755?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20FRAISER" target="_blank" rel="noopener noreferrer" aria-label="Escribir a FRAISER por WhatsApp">
+        <img src="assets/whatsapp-contact.png" alt="" width="512" height="512">
+        <span class="whatsapp-float__label">WhatsApp</span>
+      </a>
+    </aside>
+
+    <dialog class="legal-dialog" id="privacy-policy" aria-labelledby="privacy-title" data-searchable data-title="Aviso de privacidad" data-category="Información legal · histórica" data-summary="Resumen del aviso publicado en 2024; requiere revisión antes de presentarse como vigente." data-keywords="datos personales derechos arco acceso rectificacion cancelacion oposicion">
+      <div class="legal-dialog-panel">
+        <header class="legal-dialog-header">
+          <div>
+            <p class="legal-dialog-date">Aviso publicado · 14 de mayo de 2024</p>
+            <h2 id="privacy-title">Aviso de privacidad</h2>
+          </div>
+          <button class="legal-dialog-close" type="button" data-close-legal aria-label="Cerrar aviso de privacidad">
+            <span>Cerrar</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+          </button>
+        </header>
+        <div class="legal-dialog-content" tabindex="0">
+          <p class="legal-document-warning"><strong>Documento histórico:</strong> este resumen recoge información del aviso publicado en 2024. No confirma que sus prácticas, contactos o disposiciones sigan vigentes; solicite una revisión jurídica antes de publicarlo o usarlo como aviso actual.</p>
+
+          <h3>Responsable y datos personales</h3>
+          <p>El aviso identifica a Ileana Serrano Fraire como responsable y menciona la Ley Federal de Protección de Datos Personales en Posesión de los Particulares. Señala que se pueden recabar domicilio, teléfono, correo electrónico, RFC, CURP, estado civil y nacionalidad, por medio de solicitudes de servicio, declaraciones, redes sociales, medios electrónicos y documentos.</p>
+
+          <h3>Finalidades que describe el aviso</h3>
+          <ul>
+            <li>Identificar a la persona titular y enviar avisos y notificaciones, incluida la promoción de servicios.</li>
+            <li>Preparar propuestas y prestar servicios profesionales, legales y de propiedad intelectual.</li>
+            <li>Facturar, cobrar, conservar registros y dar seguimiento a la relación profesional o comercial.</li>
+            <li>Realizar análisis estadísticos y de mercado, así como promoción y mercadeo esporádico de servicios.</li>
+          </ul>
+          <p>El documento enumera los principios de licitud, calidad, consentimiento, información, finalidad, lealtad, proporcionalidad y responsabilidad, y señala que el tratamiento debe limitarse a sus finalidades y a las obligaciones de la relación profesional.</p>
+
+          <h3>Transferencias y limitación del uso</h3>
+          <p>Contempla transferencias dentro y fuera de México a terceros subcontratados para prestar los servicios y, en los supuestos que describe, a autoridades, fedatarios públicos, abogados y otras personas que considere necesarias para la prestación. Para solicitar la limitación del uso o divulgación, el documento indica un correo electrónico o una notificación escrita al domicilio de la responsable y señala que se entregará un acuse de recibo.</p>
+
+          <h3>Derechos ARCO y solicitudes</h3>
+          <p>Describe los derechos de acceso, rectificación, cancelación y oposición. Para una solicitud, pide incluir:</p>
+          <ul>
+            <li>Nombre de la persona titular y domicilio u otro medio para comunicar la respuesta.</li>
+            <li>Documentos que acrediten la identidad o, cuando corresponda, la representación legal.</li>
+            <li>Una descripción clara del derecho que se desea ejercer y cualquier elemento que ayude a localizar los datos.</li>
+          </ul>
+          <p>El aviso indica que se entregará un acuse de recibo y que las solicitudes se resolverán en un plazo de hasta 20 días, prorrogable por un periodo igual cuando exista una causa justificada. Estos plazos se consignan únicamente como parte del texto histórico consultado.</p>
+
+          <h3>Cambios y contacto que aparecen en la versión publicada</h3>
+          <p>El aviso describe notificaciones de cambios por correo electrónico, publicación en el sitio web o vía telefónica. También contiene una cláusula según la cual, si no recibe respuesta a una modificación notificada dentro de 72 horas, se entendería que la persona acepta los cambios. Esta cláusula se presenta exclusivamente como parte de la versión histórica y no como una regla vigente ni asesoría jurídica.</p>
+          <p>Los datos de contacto que aparecen en ese aviso son Calle Jacarandas 1464, Col. Paraísos del Colli, Zapopan, Jalisco, C.P. 45069, y fraiserinnovation@gmail.com. Confirme que sigan vigentes antes de enviar información personal.</p>
+        </div>
+        <footer class="legal-dialog-footer">
+          <p>Resumen informativo. No verifica prácticas actuales ni sustituye una revisión jurídica.</p>
+        </footer>
+      </div>
+    </dialog>
+
+    <dialog class="legal-dialog" id="cookie-policy" aria-labelledby="cookie-title" data-searchable data-title="Política de cookies" data-category="Información legal · histórica" data-summary="Resumen de la política publicada en 2016; no confirma las tecnologías de seguimiento usadas actualmente." data-keywords="cookies analitica publicidad seguimiento privacidad">
+      <div class="legal-dialog-panel">
+        <header class="legal-dialog-header">
+          <div>
+            <p class="legal-dialog-date">Versión publicada · 2016</p>
+            <h2 id="cookie-title">Política de cookies</h2>
+          </div>
+          <button class="legal-dialog-close" type="button" data-close-legal aria-label="Cerrar política de cookies">
+            <span>Cerrar</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+          </button>
+        </header>
+        <div class="legal-dialog-content" tabindex="0">
+          <p class="legal-document-warning"><strong>Documento histórico:</strong> esta síntesis recoge una política publicada en 2016. No acredita qué cookies o servicios de terceros se utilizan actualmente; confirme las prácticas vigentes y actualice el aviso antes de publicarlo o usarlo.</p>
+
+          <h3>Qué son las cookies</h3>
+          <p>El documento las describe como archivos guardados en el dispositivo que permiten almacenar o recuperar información sobre la navegación y que, según su contenido y uso, podrían reconocer hábitos o a una persona usuaria.</p>
+
+          <h3>Tipos de cookies que describe la política</h3>
+          <ul>
+            <li><strong>Técnicas:</strong> para navegar y utilizar funciones del sitio.</li>
+            <li><strong>De personalización:</strong> para recordar preferencias, como el idioma o el navegador.</li>
+            <li><strong>Analíticas:</strong> para medir y analizar el uso del sitio.</li>
+            <li><strong>Publicitarias y de publicidad comportamental:</strong> para gestionar anuncios y adaptar su contenido a los hábitos de navegación.</li>
+          </ul>
+
+          <h3>Configuración del navegador</h3>
+          <p>La política indica que es posible permitir, bloquear o eliminar cookies desde la configuración del navegador y menciona Chrome, Internet Explorer, Firefox, Safari, Opera y Edge. También advierte que bloquearlas o eliminarlas podría afectar la calidad o el funcionamiento de algunas partes del sitio, y señala el buscador integrado como ejemplo de una función relacionada con cookies esenciales.</p>
+
+          <h3>Servicios de terceros mencionados en 2016</h3>
+          <p>El texto menciona DoubleClick para publicidad, Google AdSense y Google Analytics para publicidad y estadísticas, además de funciones para compartir contenido mediante Facebook, Twitter y Google+. La inclusión de esos nombres en la versión de 2016 no confirma que dichos servicios, tecnologías o integraciones sigan activos.</p>
+          <p>La dirección de contacto que figura en esa política es hola@fraiserfromiptoinnovation.com, distinta del correo que aparece en el aviso de privacidad. El texto también menciona el formulario de contacto. Confirme los canales vigentes antes de enviar una consulta.</p>
+        </div>
+        <footer class="legal-dialog-footer">
+          <p>Resumen informativo de una versión de 2016. No confirma el uso actual de cookies ni servicios de terceros.</p>
+        </footer>
+      </div>
+    </dialog>
+
+  </body>
+</html>

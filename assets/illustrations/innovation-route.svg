@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="420" viewBox="0 0 1080 420" role="img" aria-labelledby="route-title route-description">
+  <title id="route-title">Cuatro etapas del recorrido de una innovación</title>
+  <desc id="route-description">Identificar un activo intangible, elegir cómo protegerlo, analizar su madurez tecnológica y preparar acuerdos para transferir tecnología.</desc>
+  <rect width="1080" height="420" fill="#f5f7f1"/>
+  <path d="M0 56h1080M0 364h1080" stroke="#d7dfd0"/>
+  <path d="M36 50v12m1008-12v12M36 358v12m1008-12v12" stroke="#365229" stroke-width="1.5"/>
+  <path d="M126 156h828" fill="none" stroke="#365229" stroke-opacity=".38" stroke-width="2"/>
+  <path d="m941 148 13 8-13 8" fill="none" stroke="#365229" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+
+  <g fill="none" stroke="#365229" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="132" cy="156" r="43" fill="#e6f0d7" stroke-width="2"/>
+    <circle cx="132" cy="156" r="24" stroke-opacity=".7" stroke-width="1.5"/>
+    <path d="m114 163 13-21 11 15 13-19m-28 25 9-14 16 17" stroke-width="2"/>
+    <circle cx="127" cy="142" r="3.5" fill="#8dbf36"/>
+    <circle cx="138" cy="157" r="3.5" fill="#89bcce"/>
+    <circle cx="151" cy="138" r="3.5" fill="#8dbf36"/>
+
+    <circle cx="404" cy="156" r="43" fill="#e6f0d7" stroke-width="2"/>
+    <path d="M388 132h22l12 12v37h-34z" fill="#fff" stroke-width="2"/>
+    <path d="M410 132v13h12m-27-1h10m-10 8h19m-19 7h19m-19 7h14" stroke-width="1.8"/>
+    <path d="M398 169h8" stroke="#8dbf36" stroke-width="3"/>
+
+    <circle cx="676" cy="156" r="43" fill="#e6f0d7" stroke-width="2"/>
+    <path d="M655 180v-35m14 35v-19m14 19v-29m14 29v-42m-43 42h50" stroke-width="2"/>
+    <path d="m657 144 14 8 14-14 12-10" stroke="#89bcce" stroke-width="2.5"/>
+    <circle cx="657" cy="144" r="3" fill="#8dbf36" stroke="none"/>
+    <circle cx="671" cy="152" r="3" fill="#8dbf36" stroke="none"/>
+    <circle cx="685" cy="138" r="3" fill="#8dbf36" stroke="none"/>
+    <circle cx="697" cy="128" r="3" fill="#8dbf36" stroke="none"/>
+
+    <circle cx="948" cy="156" r="43" fill="#e6f0d7" stroke-width="2"/>
+    <path d="m927 146 21-12 21 12v24l-21 12-21-12zm0 0 21 12 21-12m-21 12v24m-21-24 21 12 21-12" stroke-width="1.8"/>
+    <circle cx="927" cy="146" r="3.5" fill="#89bcce"/>
+    <circle cx="948" cy="134" r="3.5" fill="#8dbf36"/>
+    <circle cx="969" cy="146" r="3.5" fill="#89bcce"/>
+    <circle cx="948" cy="170" r="3.5" fill="#8dbf36"/>
+  </g>
+
+  <g fill="#365229">
+    <circle cx="132" cy="156" r="4"/>
+    <circle cx="404" cy="156" r="4"/>
+    <circle cx="676" cy="156" r="4"/>
+    <circle cx="948" cy="156" r="4"/>
+  </g>
+
+  <g fill="#596156" font-family="'Atkinson Hyperlegible', Arial, sans-serif">
+    <text x="70" y="96" font-size="12" font-weight="700" letter-spacing="1.6">01 · DESCUBRIR</text>
+    <text x="342" y="96" font-size="12" font-weight="700" letter-spacing="1.6">02 · PROTEGER</text>
+    <text x="614" y="96" font-size="12" font-weight="700" letter-spacing="1.6">03 · EVALUAR</text>
+    <text x="886" y="96" font-size="12" font-weight="700" letter-spacing="1.6">04 · TRANSFERIR</text>
+  </g>
+
+  <g fill="#30362d" font-family="'Atkinson Hyperlegible', Arial, sans-serif">
+    <text x="66" y="239" font-size="19" font-weight="700">Activo intangible</text>
+    <text x="66" y="268" font-size="13">Identificar invenciones, marcas</text>
+    <text x="66" y="288" font-size="13">y conocimiento.</text>
+
+    <text x="338" y="239" font-size="19" font-weight="700">Protección</text>
+    <text x="338" y="268" font-size="13">Elegir figuras y territorios</text>
+    <text x="338" y="288" font-size="13">de interés.</text>
+
+    <text x="610" y="239" font-size="19" font-weight="700">Madurez tecnológica</text>
+    <text x="610" y="268" font-size="13">Analizar el nivel de preparación</text>
+    <text x="610" y="288" font-size="13">de la tecnología (TRL).</text>
+
+    <text x="882" y="239" font-size="19" font-weight="700">Acuerdos</text>
+    <text x="882" y="268" font-size="13">Preparar licencias, negociación</text>
+    <text x="882" y="288" font-size="13">y colaboración.</text>
+  </g>
+
+  <g fill="none" stroke="#aab7a2" stroke-width="1">
+    <path d="M44 76v264m272-264v264m272-264v264m272-264v264m176-264v264"/>
+  </g>
+</svg>

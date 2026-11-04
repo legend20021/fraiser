@@ -1,0 +1,12 @@
+# Internal project and design notes.
+/PRODUCT.md
+/DESIGN.md
+/.impeccable/
+
+# Unused local images that are not part of the published site.
+/assets/botanical-study.jpg
+/assets/lab-glassware.jpg
+/assets/photography/innovation-*.jpg
+
+# Generated GitHub Pages artifact.
+/_site/
