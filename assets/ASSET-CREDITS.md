@@ -11,3 +11,4 @@
 - `fraiser-logo.png` — supplied by the user for this project and copied unchanged. Original is a 120 × 84 pixel transparent PNG; request a vector or higher-resolution master before production use.
 - `whatsapp-contact.png` — WhatsApp icon supplied by the user in this project conversation and copied unchanged.
 - `partners/UDG.png`, `partners/Exinsa.png`, and `partners/UASLP.png` — logo images published in FRAISER's client carousel at https://www.fraiserfromiptoinnovation.com/. Reused as references shown on the source site, not as endorsements or testimonials.
+- `partners/PAPPIEM.png` — PAPPIEM program logo supplied by the user and copied unchanged. Used with a clearly dated reference to the 2024 Michoacán advisers' register; the logo alone does not establish current participation or commercial endorsement. Program information: https://icti.michoacan.gob.mx/convocatoria-pappiem-2024/.

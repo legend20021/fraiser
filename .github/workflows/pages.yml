@@ -1,0 +1,47 @@
+name: Publish FRAISER website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out site
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Prepare published files
+        run: |
+          mkdir -p _site/assets/illustrations _site/assets/partners _site/assets/photography
+          cp index.html styles.css script.js _site/
+          cp assets/fraiser-logo.png _site/assets/
+          cp assets/illustrations/innovation-route.svg assets/illustrations/innovation-route-mobile.svg _site/assets/illustrations/
+          cp assets/partners/Exinsa.png assets/partners/UASLP.png assets/partners/UDG.png _site/assets/partners/
+          cp assets/photography/electronics-prototype.jpg assets/photography/laboratory-glassware.jpg assets/photography/laboratory-researcher.jpg assets/photography/nagoya-editorial.png _site/assets/photography/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

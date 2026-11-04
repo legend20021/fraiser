@@ -45,9 +45,17 @@
 
     <div class="splash-screen" id="splash-screen" aria-hidden="true">
       <div class="splash-content">
-        <img src="assets/fraiser-logo.png" alt="" width="120" height="84">
-        <span class="splash-rule" aria-hidden="true"></span>
-        <p class="splash-message">Ideas que encuentran su rumbo.</p>
+        <div class="splash-copy">
+          <img src="assets/fraiser-logo.png" alt="" width="120" height="84">
+          <span class="splash-rule" aria-hidden="true"></span>
+          <p class="splash-message">Ideas que encuentran su rumbo.</p>
+          <p class="splash-descriptor">Propiedad intelectual · Transferencia · Innovación</p>
+          <p class="splash-sequence">Conocimiento <span aria-hidden="true">→</span> Protección <span aria-hidden="true">→</span> Transferencia</p>
+        </div>
+        <div class="splash-visual">
+          <img src="assets/photography/laboratory-glassware.jpg" alt="" width="1500" height="1000">
+          <span class="splash-coordinate">FRAISER · FROM IP TO INNOVATION</span>
+        </div>
       </div>
     </div>
 
@@ -113,7 +121,7 @@
         <div class="hero-grid">
           <div class="hero-copy">
             <h1 id="hero-title">Cada innovación necesita una ruta<span class="title-mark">.</span></h1>
-            <p class="hero-intro">Acompañamos a emprendedores, empresas, academia y universidades en la protección y el desarrollo de sus proyectos de innovación.</p>
+            <p class="hero-intro">Acompañamos a emprendedores, empresas, academia y universidades a proteger y desarrollar sus proyectos de innovación.</p>
             <div class="hero-actions">
               <a class="button button--lime" href="https://wa.me/523312221755?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20FRAISER" target="_blank" rel="noopener noreferrer">
                 Hablemos por WhatsApp
@@ -144,6 +152,21 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6"></path></svg>
         </a>
       </section>
+
+      <nav class="hero-specialties" aria-label="Servicios principales">
+        <div class="hero-specialties__inner">
+          <a class="hero-specialty" href="#propiedad-intelectual">
+            <span class="hero-specialty__title">Propiedad intelectual</span>
+            <span class="hero-specialty__description">Registro de marcas y patentes, además de diseños industriales en México y el extranjero.</span>
+            <span class="hero-specialty__action">Explorar protección <span aria-hidden="true">↗</span></span>
+          </a>
+          <a class="hero-specialty" href="#transferencia">
+            <span class="hero-specialty__title">Transferencia de tecnología y contratos</span>
+            <span class="hero-specialty__description">Contratos y acuerdos para colaborar, proteger conocimiento y transferir tecnología.</span>
+            <span class="hero-specialty__action">Explorar transferencia <span aria-hidden="true">↗</span></span>
+          </a>
+        </div>
+      </nav>
 
       <section class="about-section section-shell" id="nosotros" aria-labelledby="about-title" data-searchable data-title="Nosotros" data-category="FRAISER" data-summary="Conoce el trabajo de FRAISER en propiedad intelectual, transferencia de tecnología y gestión de innovación." data-keywords="firma quienes somos acerca de nosotros">
         <div class="about-grid">
@@ -205,16 +228,17 @@
               </summary>
               <div class="entry-detail">
                 <p>Si necesitas proteger una marca, invención, diseño, obra o software, FRAISER ofrece asesoría para identificar el activo y revisar opciones de registro y gestión en México y el extranjero.</p>
-                <p>La información institucional presenta la propiedad intelectual como un conjunto de derechos territoriales, exclusivos y temporales. Su alcance comprende creaciones artísticas y literarias, signos que distinguen productos y servicios e invenciones con utilidad comercial. La estrategia considera el tipo de activo, el presupuesto y los territorios de interés.</p>
+                <p>La propiedad intelectual comprende creaciones artísticas y literarias, signos que distinguen productos y servicios e invenciones con utilidad comercial. Los derechos son territoriales y, según la figura, pueden otorgar exclusividad por un periodo definido. La estrategia considera el activo, el presupuesto y los países de interés.</p>
                 <p>La búsqueda del estado de la técnica reúne información que se hizo pública antes de presentar una solicitud o prioridad, en México o en otros países. Este análisis ayuda a orientar la factibilidad, la redacción de la solicitud y la estrategia de protección.</p>
                 <ul>
-                  <li>Marcas, imagen y avisos comerciales; patentes, modelos de utilidad, diseños industriales y esquemas de trazado de circuitos integrados.</li>
-                  <li>Indicaciones geográficas, denominaciones de origen, obras literarias y artísticas, software, aplicaciones móviles y bases de datos; reservas de derechos de uso exclusivo, ISBN e ISSN.</li>
+                  <li>Registro en México y el extranjero de marcas, imagen comercial y avisos comerciales; patentes, modelos de utilidad y diseños industriales.</li>
+                  <li>Esquemas de trazado de circuitos integrados, indicaciones geográficas, denominaciones de origen, obras literarias y artísticas, software, aplicaciones móviles y bases de datos; reservas de derechos de uso exclusivo, ISBN e ISSN.</li>
                   <li>Registro de variedades vegetales y protección documental y física de secretos industriales.</li>
                   <li>Búsquedas del estado de la técnica, análisis de patentabilidad y libertad de operación (FTO) para orientar la estrategia y prevenir posibles infracciones.</li>
                   <li>Análisis previo de novedad global, actividad inventiva y aplicación industrial; para modelos de utilidad, de novedad y aplicación industrial; y para diseños, de novedad, creación independiente y grado significativo.</li>
                   <li>Auditorías y opiniones técnicas sobre patentes, modelos de utilidad y diseños para investigación y desarrollo o litigios, además de controversias por infracciones, apropiación de activos y competencia desleal.</li>
                 </ul>
+                <p class="service-next-step">Las obras originales pueden estar protegidas por derechos de autor; las marcas, invenciones y diseños requieren revisar otras figuras. ¿Quieres conocer opciones para tu creación? <a href="#contacto">Conversemos sobre tu proyecto.</a></p>
               </div>
             </details>
 
@@ -225,14 +249,15 @@
                 <span class="entry-control" aria-hidden="true"></span>
               </summary>
               <div class="entry-detail">
-                <p>Si tu equipo busca compartir una tecnología, licenciarla o acercarla a otros usuarios, FRAISER aborda las opciones de transferencia, los acuerdos y la negociación para su uso o explotación comercial.</p>
-                <p>La información institucional describe la transferencia como el paso formal de conocimiento y de derechos de uso o explotación hacia una persona u organización distinta al equipo que desarrolló la tecnología.</p>
+                <p>Si tu equipo busca compartir una tecnología, licenciarla o acercarla a otros usuarios, FRAISER aborda las opciones de transferencia, los acuerdos y la negociación para su uso o explotación comercial. Un contrato puede establecer qué conocimientos, tecnología o derechos de propiedad intelectual comparte quien transfiere y bajo qué condiciones los recibe la otra parte.</p>
+                <p>La transferencia formaliza el paso de conocimiento y de derechos de uso o explotación hacia una persona u organización distinta al equipo que desarrolló la tecnología.</p>
                 <ul>
                   <li>Comercialización nacional e internacional, e importación y exportación de activos intangibles.</li>
                   <li>Fichas tecnológicas, valoración y dictámenes valuatorios, y análisis de madurez con niveles TRL.</li>
                   <li>Prospección de usuarios, debida diligencia (due diligence), modelos de negocio, incubación y aceleración.</li>
-                  <li>Contratos de confidencialidad, entrega de material biológico, servicios, investigación, innovación abierta y licenciamiento.</li>
-                  <li>Negociación, condiciones mutuamente acordadas, creación de start-ups, alianzas, coinversiones y vinculación con inversionistas ángel.</li>
+                  <li>Elaboración de contratos de confidencialidad, entrega de material biológico, prestación de servicios, investigación, innovación abierta y licenciamiento.</li>
+                  <li>Orientación sobre acuerdos de Consentimiento Fundamentado Previo (PIC) y Condiciones Mutuamente Acordadas (MAT) en proyectos que involucran recursos genéticos y, cuando corresponda, conocimientos tradicionales asociados.</li>
+                  <li>Negociación, creación de start-ups, alianzas, coinversiones y vinculación con inversionistas ángel.</li>
                 </ul>
                 <p>La página de servicios menciona definiciones de transferencia atribuidas a OMPI, AUTM y Conahcyt, además de evidencias para el SNII como planes de negocio, contratos, derechos registrados y cartas de usuarios que acrediten beneficios económicos, mejora de productividad o beneficios sociales.</p>
               </div>
@@ -245,7 +270,7 @@
                 <span class="entry-control" aria-hidden="true"></span>
               </summary>
               <div class="entry-detail">
-                <p>Si necesitas dar estructura a un proyecto de investigación básica o aplicada o de innovación tecnológica, FRAISER describe apoyo en coordinación, acreditaciones y gestión de fondos. Su información menciona áreas como biotecnología, farmacéutica, electrónica, mecánica y dispositivos médicos.</p>
+                <p>La gestión de innovación organiza ideas desde su evaluación y planificación hasta convertirlas en proyectos y acciones para una organización. FRAISER describe apoyo en la coordinación de proyectos de investigación básica y aplicada e innovación tecnológica, en áreas como biotecnología, farmacéutica, electrónica, mecánica y dispositivos médicos.</p>
                 <ul>
                   <li>Coordinación de proyectos; acreditación jurídica ante instancias como RENIECYT y Coecytjal, y gestión de fondos públicos y privados, nacionales y extranjeros.</li>
                   <li>Asesoría técnica y legal para elaborar acuerdos de Consentimiento Fundamentado Previo (PIC) y de Condiciones Mutuamente Acordadas para la Participación Justa y Equitativa de Beneficios (ABS) derivados del uso de recursos fitogenéticos, en el marco del Protocolo de Nagoya. La descripción de FRAISER delimita este acompañamiento a proyectos de biotecnología, farmacéutica, cosmética y alimentos.</li>
@@ -263,7 +288,7 @@
                 <span class="entry-control" aria-hidden="true"></span>
               </summary>
               <div class="entry-detail">
-                <p>Si tu producto o proyecto está sujeto a requisitos sanitarios o involucra recursos genéticos, FRAISER describe apoyo en registros, permisos y gestiones ante SEMARNAT. El alcance y los requisitos dependen del producto, la actividad y la normativa aplicable.</p>
+                <p>Los asuntos regulatorios comprenden trámites y requisitos legales asociados con desarrollos industriales y científicos. Si tu producto está sujeto a requisitos sanitarios o tu proyecto involucra recursos genéticos, FRAISER describe apoyo en registros, permisos y gestiones ante SEMARNAT. El alcance depende del producto, la actividad y la normativa aplicable.</p>
                 <ul>
                   <li>Registros sanitarios y permisos relacionados con productos y actividades reguladas.</li>
                   <li>Gestión ante SEMARNAT para el acceso a recursos genéticos y conocimientos tradicionales, incluida la participación justa y equitativa de beneficios con comunidades proveedoras.</li>
@@ -280,7 +305,7 @@
                 <span class="entry-control" aria-hidden="true"></span>
               </summary>
               <div class="entry-detail">
-                <p>Si necesitas entender qué ocurre en tu sector antes de decidir, FRAISER reúne y analiza información del entorno, tecnologías y mercados para reconocer señales y valorar oportunidades.</p>
+                <p>Si necesitas entender qué ocurre en tu sector antes de decidir, FRAISER reúne y analiza información sobre competidores, industria, tecnologías y mercados para reconocer señales y valorar oportunidades.</p>
                 <ul>
                   <li>Monitoreo, vigilancia y estudios de tendencias tecnológicas.</li>
                   <li>Estudios de mercado con fuentes primarias y secundarias.</li>
@@ -338,14 +363,23 @@
       <section class="references-section section-shell" id="referencias" aria-labelledby="references-title" data-searchable data-title="Referencias institucionales" data-category="FRAISER" data-summary="Organizaciones mencionadas en la sección de clientes del sitio oficial de FRAISER." data-keywords="udg universidad guadalajara exinsa uaslp san luis potosi pappiem padron asesores directorio talento jalisco">
         <div class="references-heading">
           <h2 id="references-title">Referencias institucionales</h2>
-          <p>En la sección de clientes de FRAISER aparecen la Universidad de Guadalajara, Exinsa y la Universidad Autónoma de San Luis Potosí.</p>
+          <p>FRAISER comparte su experiencia de acompañamiento a proyectos de innovación y presenta estas organizaciones en su sección de clientes: la Universidad de Guadalajara, Exinsa y la Universidad Autónoma de San Luis Potosí.</p>
         </div>
         <div class="reference-register" aria-label="Logotipos institucionales">
           <img src="assets/partners/UDG.png" alt="Universidad de Guadalajara" width="520" height="233" loading="lazy">
           <img src="assets/partners/Exinsa.png" alt="Exinsa" width="520" height="233" loading="lazy">
           <img src="assets/partners/UASLP.png" alt="Universidad Autónoma de San Luis Potosí" width="520" height="233" loading="lazy">
         </div>
-        <p class="reference-note">El sitio también menciona el Padrón de Asesores PAPPIEM 2024 y el Directorio de Talento de Jalisco.</p>
+        <p class="reference-note">El sitio también menciona el Directorio de Talento de Jalisco.</p>
+        <aside class="pappiem-reference" aria-labelledby="pappiem-title">
+          <img src="assets/partners/PAPPIEM.png" alt="Logotipo del Programa de Apoyo a la Protección de la Propiedad Intelectual del Estado de Michoacán (PAPPIEM)." width="400" height="400" loading="lazy">
+          <div class="pappiem-copy">
+            <h3 id="pappiem-title">Padrón de Asesores PAPPIEM 2024</h3>
+            <p>FRAISER señala su inclusión en el padrón de asesores de la edición 2024 del Programa de Apoyo a la Protección de la Propiedad Intelectual del Estado de Michoacán, del Instituto de Ciencia, Tecnología e Innovación del Estado.</p>
+            <a href="https://icti.michoacan.gob.mx/convocatoria-pappiem-2024/" target="_blank" rel="noopener noreferrer">Consultar la convocatoria PAPPIEM 2024 <span aria-hidden="true">↗</span></a>
+            <p class="pappiem-note">Referencia histórica de 2024; no confirma participación en ediciones posteriores ni un aval comercial.</p>
+          </div>
+        </aside>
       </section>
 
       <section class="featured-reading-section" id="lectura-destacada" aria-labelledby="reading-title">
